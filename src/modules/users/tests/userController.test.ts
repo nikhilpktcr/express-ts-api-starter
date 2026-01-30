@@ -22,11 +22,11 @@ describe("User Controller", () => {
 
   describe("registerUser", () => {
     it("should register a user and send success response", async () => {
-      const mockUser = { 
-        id: "1", 
-        name: "John", 
+      const mockUser = {
+        id: "1",
+        name: "John",
         email: "john@example.com",
-        role: "user" as const
+        role: "user" as const,
       };
       req.body = {
         name: "John",
@@ -53,7 +53,7 @@ describe("User Controller", () => {
         req,
         res,
         mockUser,
-        expect.any(String)
+        expect.any(String),
       );
     });
 
@@ -70,19 +70,19 @@ describe("User Controller", () => {
         req,
         res,
         {},
-        "Registration failed"
+        "Registration failed",
       );
     });
   });
 
   describe("loginUser", () => {
     it("should login a user and send success response", async () => {
-      const mockResponse = { 
-        token: "abc123", 
+      const mockResponse = {
+        token: "abc123",
         role: "user" as const,
         email: "john@example.com",
         name: "John",
-        userId: "1"
+        userId: "1",
       };
       req.body = { email: "john@example.com", password: "pass123" };
 
@@ -100,7 +100,7 @@ describe("User Controller", () => {
         req,
         res,
         mockResponse,
-        expect.stringContaining("loggedin successfully")
+        expect.stringContaining("loggedin successfully"),
       );
     });
 
@@ -117,7 +117,7 @@ describe("User Controller", () => {
         req,
         res,
         {},
-        "Invalid credentials"
+        "Invalid credentials",
       );
     });
   });
@@ -147,7 +147,7 @@ describe("User Controller", () => {
         req,
         res,
         mockUsers,
-        expect.any(String)
+        expect.any(String),
       );
     });
 
@@ -164,7 +164,7 @@ describe("User Controller", () => {
         req,
         res,
         {},
-        "Failed to fetch users"
+        "Failed to fetch users",
       );
     });
   });
