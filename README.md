@@ -1,6 +1,42 @@
-# 🏗️ Node.js + TypeScript Boilerplate
+# 🏗️ EXPRESS-TS-STARTER
 
-A clean, scalable production-ready backend boilerplate using **Express**, **TypeScript**, and the **MVC architecture** with **Singleton service pattern**.
+A clean, scalable production-ready backend boilerplate using **Express**, **TypeScript**, and the **MVC architecture** with **Functional Service pattern**.
+
+---
+
+## 📌 What's Included?
+
+This boilerplate comes with everything you need to build robust backend applications:
+
+| Feature               | Details                                               |
+| --------------------- | ----------------------------------------------------- |
+| **Architecture**      | MVC pattern with functional service layer             |
+| **Type Safety**       | 100% TypeScript with strict type checking             |
+| **Database**          | MongoDB/Mongoose pre-configured and ready to use      |
+| **Authentication**    | JWT-based auth with bcryptjs password hashing         |
+| **Validation**        | Built-in input validation using express-validator     |
+| **Security**          | Helmet, CORS, rate limiting, and request ID tracking  |
+| **Middleware Stack**  | Error handling, logging, authentication, file uploads |
+| **Testing Framework** | Jest with unit test examples                          |
+| **Code Quality**      | ESLint + Prettier configured for consistency          |
+| **API Responses**     | Standardized response format across endpoints         |
+| **Request Tracking**  | Unique request IDs for debugging and logging          |
+| **Graceful Shutdown** | Proper signal handling for production deployments     |
+| **Modular Structure** | Feature-based folder organization for scalability     |
+
+---
+
+## 🚀 Quick Overview
+
+```
+✨ Modern Express.js boilerplate
+📝 Fully typed with TypeScript
+🏗️ MVC architecture with services
+🔒 Security best practices built-in
+🗄️ MongoDB integration ready
+🧪 Testing setup included
+⚡ Production-ready configuration
+```
 
 ---
 
@@ -377,7 +413,7 @@ Free for personal and commercial use! ✨
 
 ## 💬 Questions?
 
-- **Email**: nikhil.pk.connect@example.com
+- **Email**: nikhil.pk.connect@gmail.com
 - **GitHub**: [@nikhilpktcr](https://github.com/nikhilpktcr)
 
 ---
