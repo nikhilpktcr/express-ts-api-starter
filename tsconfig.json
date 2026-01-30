@@ -7,8 +7,10 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true
   },
-  "include": ["./src/**/*.ts", "src/config/throttleConfig.cjs", "src/config/throattleConfig.cts"],
+  "include": ["./src/**/*.ts", "src/config/throttleConfig.cjs"],
   "exclude": ["node_modules"]
 }
