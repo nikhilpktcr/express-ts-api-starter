@@ -84,7 +84,7 @@ Users typing these will find the package:
 
 ### 3. GitHub Search
 
-- Repository: express-ts-starter
+- Repository: express-ts-api-starter
 - High keyword density in README
 - Clear documentation with use cases
 - Easy-to-find installation instructions
@@ -120,7 +120,7 @@ Before publishing to npm:
 
 When publishing packages to npm for maximum discoverability:
 
-1. **Use hyphenated, lowercase package names** (express-ts-starter)
+1. **Use hyphenated, lowercase package names** (express-ts-api-starter)
 2. **Front-load important keywords** in description
 3. **List specific technologies** (MongoDB, JWT, etc.)
 4. **Include architecture patterns** (MVC, REST, etc.)

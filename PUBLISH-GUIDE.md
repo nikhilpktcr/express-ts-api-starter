@@ -1,4 +1,4 @@
-# Complete NPM Publishing Guide for express-ts-starter
+# Complete NPM Publishing Guide for express-ts-api-starter
 
 Follow these steps to publish your package to npm.
 
@@ -24,7 +24,7 @@ Fill in:
 ### 2.1 Build the Package
 
 ```bash
-cd c:\Users\nikhi\Documents\express-ts-starter
+cd c:\Users\nikhi\Documents\express-ts-api-starter
 npm run build
 ```
 
@@ -33,7 +33,7 @@ npm run build
 **Expected output:**
 
 ```
-> express-ts-starter@1.0.0 build
+> express-ts-api-starter@1.0.0 build
 > tsc
 ```
 
@@ -92,7 +92,7 @@ Logged in as nikhilpktcr on https://registry.npmjs.org/
 ### 4.1 Check Package Name
 
 ```bash
-npm info express-ts-starter
+npm info express-ts-api-starter
 ```
 
 **What it does:** Checks if the package name is available on npm
@@ -109,7 +109,7 @@ cat package.json | grep -E '"name"|"version"|"description"'
 
 **Verify:**
 
-- ✅ name: `express-ts-starter`
+- ✅ name: `express-ts-api-starter`
 - ✅ version: `1.0.0`
 - ✅ description is clear and SEO-friendly
 - ✅ author info is correct
@@ -143,7 +143,7 @@ npm publish
 
 ```
 npm notice
-npm notice 📦  express-ts-starter@1.0.0
+npm notice 📦  express-ts-api-starter@1.0.0
 npm notice === Tarball Contents ===
 npm notice 233B   package.json
 npm notice 4.2kB  README.md
@@ -151,9 +151,9 @@ npm notice 4.2kB  README.md
 npm notice === Dist Files ===
 npm notice 145B  dist/server.js
 npm notice === Tarball Details ===
-npm notice name:          express-ts-starter
+npm notice name:          express-ts-api-starter
 npm notice version:       1.0.0
-npm notice filename:      express-ts-starter-1.0.0.tgz
+npm notice filename:      express-ts-api-starter-1.0.0.tgz
 npm notice package size:  23.4 kB
 npm notice unpacked size: 145 kB
 npm notice shasum:        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -161,7 +161,7 @@ npm notice integrity:     sha512-xxxxxxx...
 npm notice total files:   145
 npm notice
 npm notice Publishing to https://registry.npmjs.org/
-+ express-ts-starter@1.0.0
++ express-ts-api-starter@1.0.0
 ```
 
 ---
@@ -170,11 +170,11 @@ npm notice Publishing to https://registry.npmjs.org/
 
 ### 6.1 Check on npm Registry
 
-Visit: https://www.npmjs.com/package/express-ts-starter
+Visit: https://www.npmjs.com/package/express-ts-api-starter
 
 You should see:
 
-- Package name: express-ts-starter
+- Package name: express-ts-api-starter
 - Version: 1.0.0
 - Your username as author
 - README displayed
@@ -184,7 +184,7 @@ You should see:
 
 ```bash
 cd /tmp
-npm install express-ts-starter
+npm install express-ts-api-starter
 ```
 
 **Verify** it downloads and installs correctly
@@ -192,14 +192,14 @@ npm install express-ts-starter
 ### 6.3 Check Package Info
 
 ```bash
-npm info express-ts-starter
+npm info express-ts-api-starter
 ```
 
 **Should show:**
 
 ```
 {
-  name: 'express-ts-starter',
+  name: 'express-ts-api-starter',
   version: '1.0.0',
   description: 'Production-ready Express.js + TypeScript boilerplate...',
   ...
@@ -253,7 +253,7 @@ Publishing:
 
 Post-Publishing:
 ☐ Visit npm package page
-☐ Test installation: npm install express-ts-starter
+☐ Test installation: npm install express-ts-api-starter
 ☐ Verify on npmjs.com
 ☐ Share with community
 ```
@@ -278,7 +278,7 @@ npm publish
 **Cause:** Version already published
 **Solution:** Update version in package.json to a higher number
 
-### Problem: "npm ERR! The name 'express-ts-starter' is not valid"
+### Problem: "npm ERR! The name 'express-ts-api-starter' is not valid"
 
 **Cause:** Package name contains invalid characters
 **Solution:** Rename in package.json (alphanumeric, hyphens only)
@@ -294,8 +294,8 @@ npm publish
 
 Once published:
 
-1. **Share the npm link:** https://www.npmjs.com/package/express-ts-starter
-2. **Share installation command:** `npm install express-ts-starter`
+1. **Share the npm link:** https://www.npmjs.com/package/express-ts-api-starter
+2. **Share installation command:** `npm install express-ts-api-starter`
 3. **Update GitHub README** with npm badge
 4. **Share on social media** and communities
 5. **Promote in Node.js forums/communities**

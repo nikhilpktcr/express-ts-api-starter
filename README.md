@@ -1,7 +1,7 @@
-# 🏗️ EXPRESS-TS-STARTER | Express TypeScript Boilerplate
+# 🏗️ EXPRESS-TS-API-STARTER | Express TypeScript Boilerplate
 
-[![npm version](https://badge.fury.io/js/express-ts-starter.svg)](https://badge.fury.io/js/express-ts-starter)
-[![npm downloads](https://img.shields.io/npm/dm/express-ts-starter.svg)](https://www.npmjs.com/package/express-ts-starter)
+[![npm version](https://badge.fury.io/js/express-ts-api-starter.svg)](https://badge.fury.io/js/express-ts-api-starter)
+[![npm downloads](https://img.shields.io/npm/dm/express-ts-api-starter.svg)](https://www.npmjs.com/package/express-ts-api-starter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![Express.js](https://img.shields.io/badge/Express-5.1-green.svg)](https://expressjs.com/)
@@ -70,13 +70,13 @@ This production-ready Express.js + TypeScript boilerplate includes everything No
 ### Option 1: Install as npm Package (Recommended)
 
 ```bash
-npm install express-ts-starter
+npm install express-ts-api-starter
 ```
 
 ### Option 2: Clone & Customize
 
 ```bash
-git clone https://github.com/nikhilpktcr/express-ts-starter.git my-api
+git clone https://github.com/nikhilpktcr/express-ts-api-starter.git my-api
 cd my-api
 npm install
 npm run dev
@@ -450,7 +450,7 @@ Free for personal and commercial use! ✨
 ## 💬 Questions & Support
 
 - **Email**: nikhil.pk.connect@gmail.com
-- **GitHub Issues**: [Report bugs](https://github.com/nikhilpktcr/express-ts-starter/issues)
+- **GitHub Issues**: [Report bugs](https://github.com/nikhilpktcr/express-ts-api-starter/issues)
 - **GitHub**: [@nikhilpktcr](https://github.com/nikhilpktcr)
 
 ---
@@ -489,7 +489,7 @@ This boilerplate is perfect for developers searching for:
 Start building your next API with this production-ready boilerplate. Clone, customize, and deploy in minutes!
 
 ```bash
-npm install express-ts-starter
+npm install express-ts-api-starter
 ```
 
 **Happy coding!** 🎉
