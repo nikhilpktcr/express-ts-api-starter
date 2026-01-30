@@ -22,9 +22,15 @@ describe("User Controller", () => {
 
   describe("registerUser", () => {
     it("should register a user and send success response", async () => {
-      const mockUser = { id: "1", name: "John", email: "john@example.com" };
+      const mockUser = { 
+        id: "1", 
+        name: "John", 
+        email: "john@example.com",
+        role: "user" as const
+      };
       req.body = {
-        ...mockUser,
+        name: "John",
+        email: "john@example.com",
         password: "pass123",
         role: "user",
         phone: "1234567890",
@@ -71,7 +77,13 @@ describe("User Controller", () => {
 
   describe("loginUser", () => {
     it("should login a user and send success response", async () => {
-      const mockResponse = { token: "abc123", role: "user" };
+      const mockResponse = { 
+        token: "abc123", 
+        role: "user" as const,
+        email: "john@example.com",
+        name: "John",
+        userId: "1"
+      };
       req.body = { email: "john@example.com", password: "pass123" };
 
       (userService.loginUser as jest.Mock).mockResolvedValue(mockResponse);

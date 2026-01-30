@@ -3,6 +3,8 @@ src/
 scripts/
 *.test.ts
 *.spec.ts
+**/*.test.js
+**/*.spec.js
 
 # Configuration files
 .env

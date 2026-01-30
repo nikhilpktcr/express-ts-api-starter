@@ -9,6 +9,7 @@ Follow these steps to publish your package to npm.
 Visit: https://www.npmjs.com/signup
 
 Fill in:
+
 - Username: `nikhilpktcr` (or your preferred username)
 - Email: `nikhil.pk.connect@gmail.com`
 - Password: Create a strong password
@@ -21,6 +22,7 @@ Fill in:
 ## Step 2: Prepare Your Package
 
 ### 2.1 Build the Package
+
 ```bash
 cd c:\Users\nikhi\Documents\express-ts-starter
 npm run build
@@ -29,6 +31,7 @@ npm run build
 **What it does:** Compiles TypeScript to JavaScript in `dist/` folder
 
 **Expected output:**
+
 ```
 > express-ts-starter@1.0.0 build
 > tsc
@@ -37,6 +40,7 @@ npm run build
 ---
 
 ### 2.2 Run Tests (Optional but Recommended)
+
 ```bash
 npm test
 ```
@@ -46,6 +50,7 @@ npm test
 ---
 
 ### 2.3 Verify Files to Publish
+
 ```bash
 npm pack --dry-run
 ```
@@ -53,6 +58,7 @@ npm pack --dry-run
 **What it does:** Shows what files will be included in the npm package without actually publishing
 
 **Expected files:**
+
 - `dist/` folder (compiled code)
 - `README.md`
 - `LICENSE`
@@ -67,12 +73,14 @@ npm login
 ```
 
 **What it asks:**
+
 - Username: `nikhilpktcr`
 - Password: Your npm password
 - Email: `nikhil.pk.connect@gmail.com`
 - Email verification (npm will ask if you want 2FA)
 
 **Expected output:**
+
 ```
 Logged in as nikhilpktcr on https://registry.npmjs.org/
 ```
@@ -82,6 +90,7 @@ Logged in as nikhilpktcr on https://registry.npmjs.org/
 ## Step 4: Final Verification Before Publishing
 
 ### 4.1 Check Package Name
+
 ```bash
 npm info express-ts-starter
 ```
@@ -93,11 +102,13 @@ npm info express-ts-starter
 **If taken:** You need to change the package name in `package.json`
 
 ### 4.2 Check package.json
+
 ```bash
 cat package.json | grep -E '"name"|"version"|"description"'
 ```
 
 **Verify:**
+
 - ✅ name: `express-ts-starter`
 - ✅ version: `1.0.0`
 - ✅ description is clear and SEO-friendly
@@ -105,6 +116,7 @@ cat package.json | grep -E '"name"|"version"|"description"'
 - ✅ license: `MIT`
 
 ### 4.3 Check Required Files Exist
+
 ```bash
 ls -la LICENSE README.md .npmignore
 ls -la dist/
@@ -121,12 +133,14 @@ npm publish
 ```
 
 **What it does:**
+
 1. Validates your package.json
 2. Builds the package
 3. Uploads to npm registry
 4. Makes it publicly available
 
 **Expected output:**
+
 ```
 npm notice
 npm notice 📦  express-ts-starter@1.0.0
@@ -155,9 +169,11 @@ npm notice Publishing to https://registry.npmjs.org/
 ## Step 6: Verify Publishing Success
 
 ### 6.1 Check on npm Registry
+
 Visit: https://www.npmjs.com/package/express-ts-starter
 
 You should see:
+
 - Package name: express-ts-starter
 - Version: 1.0.0
 - Your username as author
@@ -165,6 +181,7 @@ You should see:
 - Installation instructions
 
 ### 6.2 Try Installing in Another Folder
+
 ```bash
 cd /tmp
 npm install express-ts-starter
@@ -173,11 +190,13 @@ npm install express-ts-starter
 **Verify** it downloads and installs correctly
 
 ### 6.3 Check Package Info
+
 ```bash
 npm info express-ts-starter
 ```
 
 **Should show:**
+
 ```
 {
   name: 'express-ts-starter',
@@ -194,19 +213,23 @@ npm info express-ts-starter
 When you make changes and want to publish a new version:
 
 ### 7.1 Update Version Number
+
 Edit `package.json`:
+
 ```json
 {
-  "version": "1.0.1"  // Change from 1.0.0
+  "version": "1.0.1" // Change from 1.0.0
 }
 ```
 
 **Semantic Versioning:**
+
 - `1.0.0` → `1.0.1` = Bug fix
 - `1.0.0` → `1.1.0` = New feature (backward compatible)
 - `1.0.0` → `2.0.0` = Breaking changes
 
 ### 7.2 Rebuild and Publish
+
 ```bash
 npm run build
 npm publish
@@ -240,8 +263,10 @@ Post-Publishing:
 ## 🆘 Troubleshooting
 
 ### Problem: "npm ERR! 403 Forbidden"
+
 **Cause:** Username already taken or not logged in correctly
-**Solution:** 
+**Solution:**
+
 ```bash
 npm logout
 npm login
@@ -249,14 +274,17 @@ npm publish
 ```
 
 ### Problem: "npm ERR! 409 Conflict"
+
 **Cause:** Version already published
 **Solution:** Update version in package.json to a higher number
 
 ### Problem: "npm ERR! The name 'express-ts-starter' is not valid"
+
 **Cause:** Package name contains invalid characters
 **Solution:** Rename in package.json (alphanumeric, hyphens only)
 
 ### Problem: "Files are missing"
+
 **Cause:** .npmignore is excluding files you need
 **Solution:** Check .npmignore, ensure dist/, README.md, LICENSE are not ignored
 

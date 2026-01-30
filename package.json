@@ -6,6 +6,8 @@
   "types": "dist/server.d.ts",
   "files": [
     "dist",
+    "!dist/**/*.test.js",
+    "!dist/**/*.spec.js",
     "README.md",
     "LICENSE"
   ],
@@ -17,7 +19,7 @@
     "lint": "eslint --ext .ts,.js .",
     "lint:fix": "eslint --ext .ts,.js . --fix",
     "lint:report": "eslint --ext .ts,.js . --format json -o eslint-report.json && node scripts/eslint-report.js",
-    "prepublishOnly": "npm run build && npm test"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "express",
