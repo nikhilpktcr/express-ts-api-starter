@@ -1,4 +1,4 @@
-# 🏗️ EXPRESS-TS-API-STARTER | Express TypeScript Boilerplate
+# 🏗️ EXPRESS-TS-API-STARTER
 
 [![npm version](https://badge.fury.io/js/express-ts-api-starter.svg)](https://badge.fury.io/js/express-ts-api-starter)
 [![npm downloads](https://img.shields.io/npm/dm/express-ts-api-starter.svg)](https://www.npmjs.com/package/express-ts-api-starter)
@@ -6,106 +6,158 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-blue.svg)](https://www.typescriptlang.org/)
 [![Express.js](https://img.shields.io/badge/Express-5.1-green.svg)](https://expressjs.com/)
 [![Node.js](https://img.shields.io/badge/Node.js-20+-brightgreen.svg)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Ready-green.svg)](https://www.mongodb.com/)
 
-**The fastest way to build production-grade REST APIs, web servers, and backend services with Node.js, Express.js, and TypeScript.**
-
-A modern, enterprise-ready boilerplate featuring MVC architecture, JWT authentication, MongoDB integration, comprehensive security, input validation, testing setup, and developer-friendly tooling. Perfect for Node.js developers building scalable REST APIs, microservices, and web servers.
+> **Opinionated Express + TypeScript starter with JWT authentication, MongoDB integration, comprehensive security middleware, input validation, error handling, and production-ready architecture—get your REST API running in minutes, not hours.**
 
 ---
 
-## 📌 What's Included? (Everything for Node.js API Development)
+## 📌 Quick Demo
 
-This production-ready Express.js + TypeScript boilerplate includes everything Node.js developers need to build scalable REST APIs:
+```typescript
+// Your API is ready with authentication, validation, and error handling out of the box!
+import app from 'express-ts-api-starter';
 
-| Feature               | Details                                               |
-| --------------------- | ----------------------------------------------------- |
-| **Architecture**      | MVC pattern with functional service layer             |
-| **Type Safety**       | 100% TypeScript with strict type checking             |
-| **Database**          | MongoDB/Mongoose pre-configured and ready to use      |
-| **Authentication**    | JWT-based auth with bcryptjs password hashing         |
-| **Validation**        | Built-in input validation using express-validator     |
-| **Security**          | Helmet, CORS, rate limiting, and request ID tracking  |
-| **Middleware Stack**  | Error handling, logging, authentication, file uploads |
-| **Testing Framework** | Jest with unit test examples                          |
-| **Code Quality**      | ESLint + Prettier configured for consistency          |
-| **API Responses**     | Standardized response format across endpoints         |
-| **Request Tracking**  | Unique request IDs for debugging and logging          |
-| **Graceful Shutdown** | Proper signal handling for production deployments     |
-| **Modular Structure** | Feature-based folder organization for scalability     |
+// Start building your endpoints immediately
+app.get('/api/v1/users', (req, res) => {
+  // Request ID automatically attached: req.headers['x-request-id']
+  // Error handling: Global middleware catches all errors
+  // Validation: Built-in express-validator ready
+  res.json({ message: 'API is running!' });
+});
+```
 
 ---
 
-## 🎯 Why Developers Choose This Express Boilerplate?
+## 🚀 Quick Start
 
-✅ **Zero Configuration** - Ready to code in seconds  
-✅ **Production-Ready** - Enterprise-grade security & performance  
-✅ **Fully Typed** - Complete TypeScript support with perfect type inference  
-✅ **Industry Standards** - Follows Node.js, Express.js best practices  
-✅ **Scalable Architecture** - Grow from startup to enterprise  
-✅ **Well-Tested** - Jest testing suite with examples  
-✅ **Amazing DX** - Hot reload, linting, formatting, debugging tools included  
-✅ **MongoDB Ready** - Mongoose integration pre-configured  
-✅ **Secure by Default** - Authentication, validation, rate limiting built-in  
-✅ **Active Community** - Regular updates and support
-
----
-
-## 🔍 Perfect For Node.js Developers Building...
-
-- **REST APIs** - Full-featured API servers with authentication and validation
-- **Microservices** - Scalable service architecture ready for production
-- **Web Servers** - Fast, secure HTTP servers for web applications
-- **Backend Services** - Complex business logic with clean separation of concerns
-- **Startups** - Quick MVP development with enterprise-grade foundation
-- **Enterprise Apps** - Scalable architecture for large teams
-- **Real-time Backends** - Socket.io integration ready
-- **Data APIs** - MongoDB integration for data management
-- **Learning** - Best practices and patterns for Node.js/Express.js
-
----
-
-## 🚀 Quick Start - Get Coding in Seconds
-
-### Option 1: Install as npm Package (Recommended)
+### Install
 
 ```bash
 npm install express-ts-api-starter
 ```
 
-### Option 2: Clone & Customize
+### Launch Your Project
 
 ```bash
-git clone https://github.com/nikhilpktcr/express-ts-api-starter.git my-api
+# Clone the repository
+git clone https://github.com/nikhilpktcr/express-ts-starter.git my-api
 cd my-api
-npm install
-npm run dev
-```
 
----
-
-## 📦 Available Commands
-
-```bash
 # Install dependencies
 npm install
 
-# Start development server (hot reload)
+# Copy environment variables
+cp .env.example .env
+
+# Start development server (hot reload enabled)
 npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-
-# Run test suite
-npm test
-
-# Lint and fix code
-npm run lint
-npm run lint:fix
 ```
+
+**That's it!** Your server is running at `http://localhost:5000` with:
+- ✅ JWT authentication ready
+- ✅ MongoDB connection configured
+- ✅ Security middleware active
+- ✅ Request logging enabled
+- ✅ Error handling in place
+
+---
+
+## ⚡ Why Choose This Over Others?
+
+### vs. Bare Express Setup
+
+| Feature | Bare Express | express-ts-api-starter |
+|---------|-------------|------------------------|
+| **Setup Time** | 2-4 hours | **2 minutes** ⚡ |
+| **TypeScript** | Manual config | ✅ Pre-configured |
+| **Authentication** | Build from scratch | ✅ JWT + bcryptjs ready |
+| **Error Handling** | Manual try-catch | ✅ Global middleware |
+| **Request Logging** | Manual setup | ✅ Morgan with request IDs |
+| **Input Validation** | Manual validation | ✅ express-validator integrated |
+| **Security** | Manual headers | ✅ Helmet + CORS configured |
+| **Database** | Manual connection | ✅ MongoDB/Mongoose ready |
+| **Testing** | Manual Jest setup | ✅ Jest configured with examples |
+| **Code Quality** | No linting | ✅ ESLint + Prettier ready |
+| **Graceful Shutdown** | Not included | ✅ Production-ready |
+
+### vs. Other Starters
+
+| Feature | Other Starters | express-ts-api-starter |
+|---------|---------------|------------------------|
+| **Architecture** | Varies | ✅ **MVC with functional services** (clean, testable) |
+| **Request Tracking** | Rare | ✅ **Unique request IDs** (debugging made easy) |
+| **Error Handling** | Basic | ✅ **Comprehensive with graceful shutdown** |
+| **Validation** | Optional | ✅ **Built-in express-validator** |
+| **Logging** | Basic | ✅ **Morgan with request ID correlation** |
+| **TypeScript** | Sometimes | ✅ **100% TypeScript with strict mode** |
+| **Documentation** | Minimal | ✅ **Well-documented with examples** |
+| **Testing** | Sometimes | ✅ **Jest with test examples included** |
+
+---
+
+## 🎯 Key Strengths
+
+### 🔐 **Authentication & Security**
+- **JWT-based authentication** with secure token generation
+- **bcryptjs password hashing** (industry standard)
+- **Helmet.js** for HTTP security headers
+- **CORS** configured for cross-origin requests
+- **Rate limiting** ready to prevent DDoS attacks
+- **Request ID tracking** for security auditing
+
+### 📝 **Input Validation**
+- **express-validator** middleware pre-configured
+- **Type-safe validation** with TypeScript
+- **Reusable validation rules** in dedicated validators folder
+- **Automatic error responses** for invalid inputs
+
+### 🛡️ **Error Handling**
+- **Global error middleware** catches all errors
+- **Standardized error responses** across all endpoints
+- **Request ID included** in error responses for debugging
+- **Graceful shutdown** handles SIGTERM/SIGINT properly
+- **Uncaught exception handling** prevents crashes
+
+### 📊 **Logging & Monitoring**
+- **Morgan logging** with custom format
+- **Request ID correlation** for tracking requests across services
+- **Structured logging** ready for production monitoring
+- **Error logging** with stack traces
+
+### 🏗️ **Architecture**
+- **MVC pattern** with clear separation of concerns
+- **Functional service layer** (easier to test than classes)
+- **Modular structure** - each feature is self-contained
+- **Scalable design** - grow from startup to enterprise
+
+---
+
+## 📦 What's Included
+
+### Core Features
+
+- ✅ **Express.js v5** - Latest framework version
+- ✅ **TypeScript 5.8** - Full type safety with strict mode
+- ✅ **MongoDB + Mongoose** - Database integration ready
+- ✅ **JWT Authentication** - Secure token-based auth
+- ✅ **bcryptjs** - Password hashing
+- ✅ **express-validator** - Input validation
+- ✅ **Helmet** - Security headers
+- ✅ **CORS** - Cross-origin resource sharing
+- ✅ **Morgan** - HTTP request logging
+- ✅ **Multer** - File upload support
+- ✅ **express-rate-limit** - Rate limiting
+- ✅ **Jest** - Testing framework with examples
+- ✅ **ESLint + Prettier** - Code quality tools
+
+### Developer Experience
+
+- ✅ **Hot reload** - See changes instantly
+- ✅ **TypeScript declarations** - Full IntelliSense support
+- ✅ **Pre-configured scripts** - dev, build, test, lint
+- ✅ **Example code** - User module with CRUD operations
+- ✅ **Test examples** - Learn testing patterns
+- ✅ **Well-documented** - Clear code structure
 
 ---
 
@@ -113,174 +165,50 @@ npm run lint:fix
 
 ```
 src/
-├── modules/
+├── modules/              # Feature modules (MVC pattern)
 │   └── users/
-│       ├── userController.ts     # Handles HTTP requests
-│       ├── userService.ts        # Singleton service - business logic
-│       ├── userMessage.ts        # Constants/messages
-│       └── tests/
-│           └── userController.test.ts
-├── routes/
-│   ├── index.ts                  # Main API router
-│   └── usersRoute.ts             # /users routes
-├── middleware/                   # Express middleware
-│   ├── auth.ts                   # Authentication
-│   ├── errorMiddleware.ts        # Error handling
-│   ├── logMiddleware.ts          # Request logging (Morgan)
-│   ├── validatorMiddleware.ts    # Input validation
-│   ├── uploadMiddleware.ts       # File uploads (Multer)
-│   └── requestIdMiddleware.ts    # Request tracking
-├── config/                       # Configuration files
-│   ├── envConfig.ts              # Environment variables
-│   ├── dbConfig.ts               # MongoDB/Mongoose connection
-│   ├── emailConfig.ts            # Email service config
-│   ├── rateLimitConfig.ts        # Rate limiting rules
-│   └── throttleConfig.cjs        # Throttle configuration
-├── models/
-│   └── UserModel.ts              # Mongoose User schema
-├── validators/                   # Input validators
-│   └── userValidators.ts         # User validation rules
-├── types/
-│   ├── index.ts                  # Exported types
-│   ├── userTypes.ts              # User type definitions
-│   └── roleType.ts               # Role type definitions
-├── interfaces/
-│   └── userInterface.ts          # User interfaces
-├── utils/                        # Utility functions
-│   ├── responseUtil.ts           # Standardized API responses
-│   └── authFunction.ts           # Authentication helpers
-├── constants/                    # Application constants
-│   └── index.ts
-├── messages/                     # Success/error messages
-│   └── index.ts
-├── app.ts                        # Express app initialization
-└── server.ts                     # Server entry point
+│       ├── userController.ts    # HTTP request handlers
+│       ├── userService.ts       # Business logic
+│       ├── userMessage.ts       # Constants/messages
+│       └── tests/               # Unit tests
+├── routes/               # API route definitions
+├── middleware/          # Express middleware
+│   ├── auth.ts          # JWT authentication
+│   ├── errorMiddleware.ts
+│   ├── validatorMiddleware.ts
+│   └── requestIdMiddleware.ts
+├── config/              # Configuration files
+│   ├── dbConfig.ts      # MongoDB connection
+│   ├── envConfig.ts     # Environment variables
+│   └── rateLimitConfig.ts
+├── models/              # Mongoose schemas
+├── validators/          # Input validation rules
+├── utils/               # Utility functions
+├── types/               # TypeScript type definitions
+└── app.ts               # Express app setup
 ```
 
 ---
 
-## ✨ Features
+## 🔧 Available Commands
 
-- ✅ **Express + TypeScript** - Full type safety
-- ✅ **MVC Architecture** - Clean separation of concerns
-- ✅ **Functional Service Pattern** - Lightweight, testable business logic
-- ✅ **Modular Routing** - Feature-based structure
-- ✅ **Security** - Helmet, CORS, JWT, bcryptjs
-- ✅ **Database** - MongoDB with Mongoose integration
-- ✅ **Validation** - Express-validator middleware
-- ✅ **Error Handling** - Global error middleware + graceful shutdown
-- ✅ **Logging** - Morgan with request IDs
-- ✅ **File Uploads** - Multer configured
-- ✅ **Rate Limiting** - Express rate-limit ready
-- ✅ **Code Quality** - ESLint + Prettier
-- ✅ **Testing** - Jest configured
-- ✅ **Standardized Responses** - Consistent API responses
+```bash
+# Development
+npm run dev          # Start dev server with hot reload
 
----
+# Production
+npm run build        # Compile TypeScript to JavaScript
+npm start            # Start production server
 
-## 🧠 Architectural Patterns
+# Testing
+npm test             # Run test suite
+npm test -- --watch  # Run tests in watch mode
+npm test -- --coverage  # Run with coverage report
 
-### Pattern Overview
-
-| Pattern/Concept            | Implementation                                      |
-| -------------------------- | --------------------------------------------------- |
-| **MVC**                    | Controllers, Services, Models - clean separation    |
-| **Functional Services**    | Exported functions for business logic (not classes) |
-| **Modular Design**         | Each feature is self-contained and independent      |
-| **Separation of Concerns** | `app.ts` initializes app, `server.ts` starts server |
-| **Global Error Handling**  | Centralized error middleware                        |
-| **Request Tracking**       | Unique request IDs for debugging                    |
-| **Graceful Shutdown**      | Proper signal handling (SIGTERM, SIGINT)            |
-
-### Why Functional Services Instead of Class-Based Singletons?
-
-This boilerplate uses **Functional Service Pattern** (exported async functions) instead of traditional Singleton classes. Here's why this approach is optimal:
-
-#### ✅ **Benefits for Developers**
-
-**1. Simplicity & Readability**
-
-```typescript
-// ✨ Our approach - simple and direct
-export const registerUser = async (data) => { ... }
-export const loginUser = async (data) => { ... }
-
-// vs. Class-based singleton (boilerplate heavy)
-class UserService {
-  private static instance: UserService;
-  static getInstance() { ... }
-  async registerUser() { ... }
-}
+# Code Quality
+npm run lint         # Check for linting errors
+npm run lint:fix     # Auto-fix linting errors
 ```
-
-**2. Easier Testing & Mocking**
-
-```typescript
-// Functional - trivial to mock
-jest.mock("./userService", () => ({
-  registerUser: jest.fn(),
-}));
-
-// Class singleton - requires getInstance() mocking
-```
-
-**3. Tree-Shaking & Bundle Size**
-
-- Only imported functions are included in production builds
-- Class instantiation adds unnecessary overhead
-- Faster startup time
-
-**4. No State Management Issues**
-
-- Functional services are stateless → no singleton state pollution
-- Each request is isolated and independent
-- No threading/concurrency concerns
-
-**5. Better for Async Operations**
-
-```typescript
-// Naturally async
-export const registerUser = async (data) => {
-  // Direct async/await
-};
-
-// vs. Class requiring async getInstance()
-```
-
-#### 🎯 **Robustness**
-
-✅ **Testable** - Functions are pure and easy to mock  
-✅ **Scalable** - Add new services without complexity  
-✅ **Maintainable** - No hidden state or initialization logic  
-✅ **Production-Ready** - Used by companies like Airbnb, Stripe  
-✅ **TypeScript-Friendly** - Full type inference for functions
-
-#### 📊 **Comparison**
-
-| Aspect             | Functional              | Class Singleton   |
-| ------------------ | ----------------------- | ----------------- |
-| **Complexity**     | Low                     | Medium-High       |
-| **Testing**        | Easy                    | Complex           |
-| **Bundle Size**    | Smaller                 | Larger            |
-| **Learning Curve** | Minimal                 | Moderate          |
-| **Scalability**    | Linear                  | Logarithmic       |
-| **Production Use** | Airbnb, Stripe, Netflix | Legacy enterprise |
-
----
-
-## 🔧 Tech Stack
-
-- **Runtime**: [Node.js](https://nodejs.org/) (v20+)
-- **Framework**: [Express](https://expressjs.com/) v5
-- **Language**: [TypeScript](https://www.typescriptlang.org/) v5
-- **Database**: [MongoDB](https://www.mongodb.com/) with [Mongoose](https://mongoosejs.com/)
-- **Security**: [Helmet](https://helmetjs.github.io/), [CORS](https://github.com/expressjs/cors)
-- **Authentication**: [JWT](https://jwt.io/), [bcryptjs](https://github.com/dcodeIO/bcrypt.js)
-- **Validation**: [express-validator](https://express-validator.github.io/docs/)
-- **Logging**: [Morgan](https://github.com/expressjs/morgan)
-- **File Upload**: [Multer](https://github.com/expressjs/multer)
-- **Testing**: [Jest](https://jestjs.io/)
-- **Linting**: [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/)
 
 ---
 
@@ -288,13 +216,7 @@ export const registerUser = async (data) => {
 
 ### Environment Variables
 
-Create a `.env` file in the root by copying from `.env.example`:
-
-```bash
-cp .env.example .env
-```
-
-Then update the values:
+Create a `.env` file:
 
 ```env
 # Server
@@ -308,35 +230,9 @@ DB_NAME=testDB
 
 # Authentication
 JWT_SECRET=your-super-secret-jwt-key-change-in-production
-
-# Email (Optional)
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your-email@gmail.com
-SMTP_PASSWORD=your-app-password
 ```
 
-**Key Variables:**
-
-- `PORT` - Server port (default: 5000)
-- `DB_CONNECTION` - MongoDB connection string
-- `DB_NAME` - Database name
-- `JWT_SECRET` - Secret key for JWT tokens (⚠️ Change in production!)
-- `BASIC_API_URL` - API base path (default: /api/v1)
-
-See [`.env.example`](.env.example) for complete list of options.
-
----
-
-## 🔐 Security Features
-
-- **Helmet** - HTTP headers security
-- **CORS** - Cross-Origin Resource Sharing
-- **JWT** - Secure authentication
-- **bcryptjs** - Password hashing
-- **Rate Limiting** - DDoS protection
-- **Input Validation** - Prevent injection attacks
-- **Request ID Tracking** - Audit trail
+See `.env.example` for all available options.
 
 ---
 
@@ -346,40 +242,22 @@ See [`.env.example`](.env.example) for complete list of options.
 # Run all tests
 npm test
 
-# Run tests in watch mode
+# Watch mode
 npm test -- --watch
 
-# Run with coverage
+# Coverage report
 npm test -- --coverage
 ```
 
----
-
-## 🔢 API Versioning
-
-Supports URL-based API versioning for backward compatibility.
-
-```typescript
-// In app.ts
-app.use("/api/v1", routes); // Change version as needed
-```
-
-**Example Endpoints:**
-
-- `POST /api/v1/users` - Create user
-- `GET /api/v1/users` - Get all users
-- `GET /api/v1/users/:id` - Get user by ID
-- `PUT /api/v1/users/:id` - Update user
-- `DELETE /api/v1/users/:id` - Delete user
+Example test included in `src/modules/users/tests/userController.test.ts`
 
 ---
 
-## 📋 Standardized Responses
+## 📋 Standardized API Responses
 
-All API responses follow a consistent format:
+All responses follow a consistent format:
 
-### Success Response
-
+**Success:**
 ```json
 {
   "success": true,
@@ -389,8 +267,7 @@ All API responses follow a consistent format:
 }
 ```
 
-### Error Response
-
+**Error:**
 ```json
 {
   "success": false,
@@ -401,22 +278,57 @@ All API responses follow a consistent format:
 
 ---
 
-## 🚦 Graceful Shutdown
+## 🔐 Security Features
 
-The server handles graceful shutdown on:
-
-- `SIGTERM` (Docker stop)
-- `SIGINT` (Ctrl+C)
-
-Existing connections are completed before exit (30-second timeout).
+- **Helmet** - Sets secure HTTP headers
+- **CORS** - Configurable cross-origin requests
+- **JWT** - Secure token-based authentication
+- **bcryptjs** - Password hashing (10 rounds)
+- **Rate Limiting** - DDoS protection ready
+- **Input Validation** - Prevents injection attacks
+- **Request ID Tracking** - Security audit trail
 
 ---
+
+## 🚦 Production Ready
+
+- ✅ **Graceful shutdown** - Handles SIGTERM/SIGINT
+- ✅ **Error handling** - Global error middleware
+- ✅ **Logging** - Request tracking with unique IDs
+- ✅ **Type safety** - Full TypeScript coverage
+- ✅ **Testing** - Jest framework configured
+- ✅ **Code quality** - ESLint + Prettier
+
+---
+
+## 🎯 Perfect For
+
+- 🚀 **REST APIs** - Full-featured API servers
+- 🔧 **Microservices** - Scalable service architecture
+- 🏢 **Enterprise Apps** - Production-ready foundation
+- 🎓 **Learning** - Best practices and patterns
+- ⚡ **MVPs** - Quick prototype development
+- 📱 **Backend Services** - Complex business logic
+
+---
+
+## 🔧 Tech Stack
+
+- **Runtime**: Node.js v20+
+- **Framework**: Express.js v5
+- **Language**: TypeScript 5.8
+- **Database**: MongoDB with Mongoose
+- **Security**: Helmet, CORS, JWT, bcryptjs
+- **Validation**: express-validator
+- **Logging**: Morgan
+- **Testing**: Jest
+- **Linting**: ESLint + Prettier
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please:
+Contributions welcome! Please:
 
 1. Fork the repository
 2. Create a feature branch (`git checkout -b feature/amazing-feature`)
@@ -428,29 +340,16 @@ Contributions are welcome! Please:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** - see `LICENSE` file for details.
+MIT License - see [LICENSE](LICENSE) file for details.
 
 Free for personal and commercial use! ✨
 
 ---
 
-## 🎯 Roadmap
-
-- [ ] API Documentation (Swagger/OpenAPI)
-- [ ] Health check endpoint
-- [ ] Pagination utility
-- [ ] Redis caching layer
-- [ ] Database migrations
-- [ ] Docker & Docker Compose
-- [ ] CI/CD pipeline examples
-- [ ] More comprehensive test suite
-
----
-
-## 💬 Questions & Support
+## 💬 Support
 
 - **Email**: nikhil.pk.connect@gmail.com
-- **GitHub Issues**: [Report bugs](https://github.com/nikhilpktcr/express-ts-api-starter/issues)
+- **GitHub Issues**: [Report bugs](https://github.com/nikhilpktcr/express-ts-starter/issues)
 - **GitHub**: [@nikhilpktcr](https://github.com/nikhilpktcr)
 
 ---
@@ -465,28 +364,21 @@ If this boilerplate helps your project:
 - 💡 **Suggest features** and improvements
 - 🔄 **Share** with other developers
 
-Your support helps improve this project for everyone!
+---
+
+## 🎯 Roadmap
+
+- [ ] API Documentation (Swagger/OpenAPI)
+- [ ] Health check endpoint
+- [ ] Pagination utility
+- [ ] Redis caching layer
+- [ ] Docker & Docker Compose
+- [ ] CI/CD pipeline examples
+- [ ] More comprehensive test suite
 
 ---
 
-## 📊 Trending Keywords
-
-This boilerplate is perfect for developers searching for:
-
-- Express TypeScript starter
-- Node.js REST API boilerplate
-- Production-ready backend template
-- MVC Node.js project
-- TypeScript Express API
-- MongoDB Express starter
-- Secure Node.js backend
-- Express authentication template
-
----
-
-## 🚀 Ready to Build?
-
-Start building your next API with this production-ready boilerplate. Clone, customize, and deploy in minutes!
+**Ready to build?** Start your next API project in minutes:
 
 ```bash
 npm install express-ts-api-starter
